@@ -5,16 +5,14 @@ const prisma = new PrismaClient();
 async function main() {
   // const getAllUsers = await prisma.user.findMany();
   // console.log(getAllUsers);
-
-  const postUser = await prisma.user.create({
-    data: {
-      email: "shourovr83@gmail.com",
-      name: "shaafin",
-      age: 34,
-    },
-  });
-
-  console.log(postUser);
+  // const postUser = await prisma.user.create({
+  //   data: {
+  //     email: "shourovr83@gmail.com",
+  //     name: "shaafin",
+  //     age: 34,
+  //   },
+  // });
+  // console.log(postUser);
 }
 
 main();
