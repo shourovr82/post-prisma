@@ -26,6 +26,10 @@ const getSinglePost = async (id: number): Promise<Post | null> => {
     where: {
       id,
     },
+    include: {
+      author: true,
+      category: true,
+    },
   });
   return result;
 };
