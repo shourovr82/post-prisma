@@ -65,6 +65,21 @@ const deletePost = async (req: Request, res: Response) => {
     res.send(error);
   }
 };
+const learnAggregateAndGrouping = async (req: Request, res: Response) => {
+  console.log("shafin");
+  try {
+    const result = await PostService.learnAggregateAndGrouping();
+
+    res.send({
+      success: true,
+      message: "Result !",
+      data: result,
+    });
+  } catch (error) {
+    console.log(error);
+    res.send(error);
+  }
+};
 //
 
 export const PostController = {
@@ -73,4 +88,5 @@ export const PostController = {
   getSinglePost,
   updatePost,
   deletePost,
+  learnAggregateAndGrouping,
 };
